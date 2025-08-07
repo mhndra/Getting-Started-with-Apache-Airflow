@@ -1,0 +1,17 @@
+services:
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-net-getting-started-with-apache-airflow
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin_password
+    ports:
+      - "5050:80"
+    volumes:
+      - ./include:/var/lib/pgadmin/storage
+    networks:
+      - getting-started-with-apache-airflow_054b29_airflow
+      
+networks:
+  getting-started-with-apache-airflow_054b29_airflow:
+    external: true
