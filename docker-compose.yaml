@@ -10,8 +10,8 @@ services:
     volumes:
       - ./include:/var/lib/pgadmin/storage
     networks:
-      - getting-started-with-apache-airflow_054b29_airflow
+      - <nama_network_yang_digunakan_postgresql_container>
       
 networks:
-  getting-started-with-apache-airflow_054b29_airflow:
+  <nama_network_yang_digunakan_postgresql_container>:
     external: true
